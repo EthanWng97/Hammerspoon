@@ -36,23 +36,37 @@
 
 ## Modules
 
-- [clipboard](./clipboard/clipboard.lua) : Clipboard history.
-- [headphone](./headphone/headphone.lua) : Bluetooth headphone auto toggle.
-- [hotkey](./hotkey/hotkey.lua) : Custom hotkey.
-- [ime](./ime/ime.lua) : Auto swith input method app.
-- [reload](./reload/reload) : Reload hs when config files change.
-- [speaker](./speaker/speaker.lua) : Hammerspoon TTS service.
-- [usb](./usb/usb.lua) : Callbacks when add/remove usb devices.
-- [volume](./volume/volume.lua) : Hotkeys for volume control.
-- [wifi](./wifi/wifi.lua) : Callbacks when Wi-Fi state change.
-- [window](./window/window.lua) : Hotkeys for window management.
-- [weather](./weather/weather.lua) : Local weather state in mac menubar.
+- [clipboard][1] : Clipboard history.
+- [headphone][2] : Bluetooth headphone auto toggle.
+- [hotkey][3] : Custom hotkey.
+- [ime][4] : Auto swith input method app.
+- [reload][5] : Reload hs when config files change.
+- [speaker][6] : Hammerspoon TTS service.
+- [usb][7] : Callbacks when add/remove usb devices.
+- [volume][8] : Hotkeys for volume control.
+- [wifi][9] : Callbacks when Wi-Fi state change.
+- [window][10] : Hotkeys for window management.
+- [weather][11] : Local weather state in mac menubar.
 
 ## Install
 
-- Install [Hammerspoon](https://www.hammerspoon.org/)
-- `git clone https://github.com/wangshub/hammerspoon-config.git ~/.hammerspoon`
+- Install [Hammerspoon][12]
+- `git clone git@github.com:NavePnow/Hammerspoon.git ~/.hammerspoon`
 
 ## License
 
-MIT @[Github/wangshub](https://github.com/wangshub)
+MIT @[Github/EvanPnow][13]
+
+[1]:	./clipboard/clipboard.lua
+[2]:	./headphone/headphone.lua
+[3]:	./hotkey/hotkey.lua
+[4]:	./ime/ime.lua
+[5]:	./reload/reload
+[6]:	./speaker/speaker.lua
+[7]:	./usb/usb.lua
+[8]:	./volume/volume.lua
+[9]:	./wifi/wifi.lua
+[10]:	./window/window.lua
+[11]:	./weather/weather.lua
+[12]:	https://www.hammerspoon.org/
+[13]:	https://github.com/NavePnow
