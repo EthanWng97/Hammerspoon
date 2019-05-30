@@ -8,20 +8,28 @@ end
 
 -- app to expected ime config
 local app2Ime = {
-    {'/Applications/iTerm.app', 'English'},
+    {'/Users/wangyifan/Applications/iTerm.app', 'English'},
     {'/Applications/Xcode.app', 'English'},
     {'/Applications/Google Chrome.app', 'Chinese'},
     {'/System/Library/CoreServices/Finder.app', 'English'},
     {'/Applications/DingTalk.app', 'Chinese'},
     {'/Applications/Kindle.app', 'English'},
     {'/Applications/NeteaseMusic.app', 'Chinese'},
-    {'/Applications/微信.app', 'Chinese'},
+    {'/Applications/WeChat.app', 'Chinese'},
     {'/Applications/System Preferences.app', 'English'},
     {'/Applications/Dash.app', 'English'},
     {'/Applications/MindNode.app', 'Chinese'},
     {'/Applications/Preview.app', 'Chinese'},
     {'/Applications/wechatwebdevtools.app', 'English'},
     {'/Applications/Sketch.app', 'English'},
+    {'/Applications/Microsoft Word.app', 'Chinese'},
+    {'/Users/wangyifan/Applications/Bartender 3.app', 'English'},
+    {'/Applications/Eudic.app', 'English'},
+    {'/Applications/词典.app', 'English'},
+    {'/Applications/Telegreat.app', 'Chinese'},
+    {'/Applications/Hyper.app', 'English'},
+    {'/Applications/Alfred 4.app', 'English'}
+
 }
 
 function updateFocusAppInputMethod()

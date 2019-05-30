@@ -32,7 +32,9 @@ function getWeather()
       menuData = {}
       for k, v in pairs(rawjson.data) do
          if k == 1 then
-            menubar:setTitle(weaEmoji[v.wea_img])
+            title1 = string.format("%s%s",weaEmoji[v.wea_img], v.tem)
+            menubar:setTitle(title1)
+            -- menubar:setTitle(weaEmoji[v.wea_img])
             titlestr = string.format("%s %s %s 🌡️%s 💧%s 💨%s 🌬 %s %s", city,weaEmoji[v.wea_img],v.day, v.tem, v.humidity, v.air, v.win_speed, v.wea)
             item = { title = titlestr }
             table.insert(menuData, item)
