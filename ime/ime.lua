@@ -28,8 +28,8 @@ local app2Ime = {
     {'/Applications/词典.app', 'English'},
     {'/Applications/Telegreat.app', 'Chinese'},
     {'/Applications/Hyper.app', 'English'},
-    {'/Applications/Alfred 4.app', 'English'}
-
+    {'/Applications/Alfred 4.app', 'English'},
+    {'/Applications/Visual Studio Code.app', 'English'},
 }
 
 function updateFocusAppInputMethod()
