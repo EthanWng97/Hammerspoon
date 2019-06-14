@@ -93,11 +93,11 @@ function getBatteryState()
 		local hour = hs.battery.timeRemaining()/60;
 		-- print(hs.battery.timeRemaining())
 		local min = hs.battery.timeRemaining()%60;
-		time = string.format("%.0fh%.0fm R",hour,min)
+		time = string.format("%.0f:%.0f R",hour,min)
 	else
 		local hour = hs.battery.timeToFullCharge()/60;
 		local min = hs.battery.timeToFullCharge()%60;
-		time = string.format("%.0fh%0.fm F",hour,min)
+		time = string.format("%.0f:%0.f F",hour,min)
 	end
 	updateMenubar()
 end
