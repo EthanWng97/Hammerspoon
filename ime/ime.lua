@@ -1,5 +1,5 @@
 local function Chinese()
-    hs.keycodes.currentSourceID("com.sogou.inputmethod.sogou.pinyin")
+    hs.keycodes.currentSourceID("com.apple.inputmethod.SCIM.ITABC")
 end
 
 local function English()
@@ -26,10 +26,13 @@ local app2Ime = {
     {'/Users/wangyifan/Applications/Bartender 3.app', 'English'},
     {'/Applications/Eudic.app', 'English'},
     {'/Applications/词典.app', 'English'},
-    {'/Applications/Telegreat.app', 'Chinese'},
+    {'/Applications/Telegram.app', 'Chinese'},
     {'/Applications/Hyper.app', 'English'},
     {'/Applications/Alfred 4.app', 'English'},
     {'/Applications/Visual Studio Code.app', 'English'},
+    {'/Applications/Safari.app', 'English'},
+    {'/Applications/MindNode.app', 'English'},
+    {'/System/Applications/Messages.app', 'Chinese'},
 }
 
 function updateFocusAppInputMethod()
@@ -45,10 +48,10 @@ function updateFocusAppInputMethod()
         end
     end
 
-    if ime == 'English' then
-        English()
-    else
+    if ime == 'Chinese' then
         Chinese()
+    else
+        English()
     end
 end
 
