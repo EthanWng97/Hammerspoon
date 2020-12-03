@@ -15,6 +15,7 @@ require "window.window"
 --requiire "weather.weather"
 require "speaker.speaker"
 require "bluestatus.bluestatus"
+-- require "app-management.app-management"
 
 -- Private use
 -- if (hs.host.localizedName() == 'evan-mac') then

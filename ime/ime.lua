@@ -3,12 +3,12 @@ local function Chinese()
 end
 
 local function English()
-    hs.keycodes.currentSourceID("com.apple.keylayout.ABC")
+    hs.keycodes.currentSourceID("com.apple.keylayout.US")
 end
 
 -- app to expected ime config
 local app2Ime = {
-    {'/Users/wangyifan/Applications/iTerm.app', 'English'},
+    {'/Applications/iTerm.app', 'English'},
     {'/Applications/Xcode.app', 'English'},
     {'/Applications/Google Chrome.app', 'Chinese'},
     {'/System/Library/CoreServices/Finder.app', 'English'},
@@ -18,7 +18,6 @@ local app2Ime = {
     {'/Applications/WeChat.app', 'Chinese'},
     {'/Applications/System Preferences.app', 'English'},
     {'/Applications/Dash.app', 'English'},
-    {'/Applications/MindNode.app', 'Chinese'},
     {'/Applications/Preview.app', 'Chinese'},
     {'/Applications/wechatwebdevtools.app', 'English'},
     {'/Applications/Sketch.app', 'English'},
@@ -33,21 +32,23 @@ local app2Ime = {
     {'/Applications/Safari.app', 'English'},
     {'/Applications/MindNode.app', 'English'},
     {'/System/Applications/Messages.app', 'Chinese'},
+    {}
 }
 
 function updateFocusAppInputMethod()
     local ime = 'English'
-    local focusAppPath = hs.window.focusedWindow():application():path()
-    for index, app in pairs(app2Ime) do
-        local appPath = app[1]
-        local expectedIme = app[2]
-
-        if focusAppPath == appPath then
-            ime = expectedIme
-            break
+    if hs.window.focusedWindow() then
+        local focusAppPath = hs.window.focusedWindow():application():path()
+        for index, app in pairs(app2Ime) do
+            local appPath = app[1]
+            local expectedIme = app[2]
+        
+            if focusAppPath == appPath then
+                ime = expectedIme
+                break
+            end
         end
     end
-
     if ime == 'Chinese' then
         Chinese()
     else
@@ -57,14 +58,16 @@ end
 
 -- helper hotkey to figure out the app path and name of current focused window
 hs.hotkey.bind({'ctrl', 'cmd'}, ".", function()
-    hs.alert.show("App path:        "
-    ..hs.window.focusedWindow():application():path()
-    .."\n"
-    .."App name:      "
-    ..hs.window.focusedWindow():application():name()
-    .."\n"
-    .."IM source id:  "
-    ..hs.keycodes.currentSourceID())
+    if hs.window.focusedWindow() then
+        hs.alert.show("App path:        "
+        ..hs.window.focusedWindow():application():path()
+        .."\n"
+        .."App name:      "
+        ..hs.window.focusedWindow():application():name()
+        .."\n"
+        .."IM source id:  "
+        ..hs.keycodes.currentSourceID())
+    end 
 end)
 
 -- Handle cursor focus and application's screen manage.
