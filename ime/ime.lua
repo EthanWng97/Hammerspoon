@@ -32,6 +32,7 @@ local app2Ime = {
     {'/Applications/Safari.app', 'English'},
     {'/Applications/MindNode.app', 'English'},
     {'/System/Applications/Messages.app', 'Chinese'},
+    {'/Applications/UlyssesMac.app', 'Chinese'},
     {}
 }
 
